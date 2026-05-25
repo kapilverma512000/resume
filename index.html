@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapil Kumar Verma - Resume</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+    
+    body { font-family: 'Inter', sans-serif; }
+    .template-container { display: none; }
+    .template-container.active { display: block; }
+
+    .hero-modern {
+      background: linear-gradient(135deg, #2563eb 0%, #6366f1 25%, #8b5cf6 50%, #a855f7 75%, #ec4899 100%);
+      background-size: 300% 300%;
+      animation: gradientAnimation 12s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .footer-fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+    }
+
+    .section-icon {
+      font-size: 1.8rem;
+      color: #4f46e5;
+    }
+
+    @media print {
+      nav, .footer-fixed, .no-print { display: none !important; }
+      .template-container:not(.active) { display: none !important; }
+      body { background: white !important; color: black !important; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 min-h-screen pb-24">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 no-print">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">Kapil's Resume</h1>
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="p-3 rounded-2xl hover:bg-slate-200 dark:hover:bg-slate-800 transition">
+          <i class="fas fa-moon text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="pt-24 pb-12 max-w-5xl mx-auto px-6">
+
+    <!-- ==================== TEMPLATE 1: Modern Animated ==================== -->
+    <div id="modern" class="template-container active">
+
+      <!-- Hero Section -->
+      <header class="hero-modern text-white rounded-3xl p-10 mb-12 shadow-2xl">
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="w-44 h-44 rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl flex-shrink-0">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQFd_Sxj9AE4yQ/profile-displayphoto-scale_400_400/B56Z5ALIjJHUAg-/0/1779193121736?e=1781136000&v=beta&t=d0ujCtMRWcz94V5PqmIPFc85ns7fkcsk0uP0uRgJj0A" 
+                 alt="Kapil Kumar Verma" class="w-full h-full object-cover">
+          </div>
+          <div class="text-center md:text-left">
+            <h1 class="text-5xl md:text-5xl font-bold mb-2">Kapil Kumar Verma</h1>
+            <p class="text-2xl opacity-90">Sr. Software Engineer | Sr. Full Stack Developer</p>
+            <p class="text-md mt-1">5+ Years Experience</p>
+            <div class="flex flex-wrap gap-4 mt-3 justify-center md:justify-start">
+              <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> Delhi, India</div>
+              <div class="flex items-center gap-2"><i class="fas fa-phone"></i> +91 9520387132</div>
+              <div class="flex items-center gap-2"><i class="fas fa-envelope"></i> kapilverma512000@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Profile Summary -->
+      <section class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fas fa-user-tie section-icon"></i>
+          <h2 class="text-3xl font-semibold">PROFILE SUMMARY</h2>
+        </div>
+        <p class="text-lg text-slate-600 dark:text-slate-400 text-justify">
+          Results-driven Senior Software Engineer with 5+ years of experience building scalable, secure, and high-performance web applications. Specialized in Node.js, React.js, and Vue.js with strong expertise in designing RESTful APIs and enterprise-grade systems.<br><br>
+          Experienced in leading backend architecture, optimizing performance, integrating complex third-party services, and delivering mission-critical government and enterprise platforms.
+        </p>
+      </section>
+
+      <!-- Technical Skills -->
+      <section class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fas fa-code section-icon"></i>
+          <h2 class="text-3xl font-semibold">TECHNICAL SKILLS & EXPERTISE</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl">
+            <h3 class="font-semibold text-xl mb-4 flex items-center gap-2"><i class="fas fa-laptop-code text-blue-600"></i> Frontend Development</h3>
+            <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+              <li><i class="fas fa-check text-emerald-500"></i> React.js, Vue.js, Nuxt.js</li>
+              <li><i class="fas fa-check text-emerald-500"></i> Redux, Vuex, Pinia</li>
+              <li><i class="fas fa-check text-emerald-500"></i> Tailwind, Bootstrap, SCSS</li>
+              <li><i class="fas fa-check text-emerald-500"></i> ECharts, Jest, Vite</li>
+            </ul>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl">
+            <h3 class="font-semibold text-xl mb-4 flex items-center gap-2"><i class="fas fa-server text-purple-600"></i> Backend Development</h3>
+            <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+              <li><i class="fas fa-check text-emerald-500"></i> Node.js, Laravel, Express.js</li>
+              <li><i class="fas fa-check text-emerald-500"></i> RESTful APIs, JWT, OAuth</li>
+              <li><i class="fas fa-check text-emerald-500"></i> MongoDB, MySQL, Oracle</li>
+              <li><i class="fas fa-check text-emerald-500"></i> PM2, AWS, CI/CD</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="mb-12">
+        <div class="flex items-center gap-3 mb-8">
+          <i class="fas fa-briefcase section-icon"></i>
+          <h2 class="text-3xl font-semibold">PROFESSIONAL EXPERIENCE</h2>
+        </div>
+        <div class="space-y-10">
+          <div class="pl-8 border-l-4 border-blue-600">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
+              <div>
+                <h3 class="font-semibold text-xl">Senior Developer</h3>
+                <p class="text-purple-600">Aurionpro Solutions Limited, New Delhi • June 2025 – Present</p>
+              </div>
+            </div>
+            <ul class="list-disc pl-5 mt-3 space-y-1 text-slate-600 dark:text-slate-400">
+              <li>Designed and optimized high-performance REST APIs for government platforms</li>
+              <li>Architected scalable backend modules for mission-critical systems</li>
+            </ul>
+          </div>
+
+          <div class="pl-8 border-l-4 border-blue-600">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
+              <div>
+                <h3 class="font-semibold text-xl">Senior API Developer</h3>
+                <p class="text-purple-600">CMS Computers Ltd, New Delhi • May 2024 – June 2025</p>
+              </div>
+            </div>
+            <ul class="list-disc pl-5 mt-3 space-y-1 text-slate-600 dark:text-slate-400">
+              <li>Engineered secure RESTful APIs</li>
+              <li>Integrated enterprise-level services</li>
+            </ul>
+          </div>
+
+          <div class="pl-8 border-l-4 border-blue-600">
+            <div class="flex items-center gap-3">
+              <i class="fas fa-briefcase text-blue-600 text-2xl"></i>
+              <div>
+                <h3 class="font-semibold text-xl">Senior Web Developer</h3>
+                <p class="text-purple-600">Seekex Technologies Pvt. Ltd. • Aug 2022 – May 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Projects -->
+      <section class="mb-12">
+        <div class="flex items-center gap-3 mb-6">
+          <i class="fas fa-project-diagram section-icon"></i>
+          <h2 class="text-3xl font-semibold">KEY PROJECTS</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl flex items-start gap-4 hover:shadow-xl transition">
+            <i class="fas fa-globe text-3xl text-blue-500 mt-1"></i>
+            <div>Sampurna Digital Sansad - Digital Parliament Platform</div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl flex items-start gap-4 hover:shadow-xl transition">
+            <i class="fas fa-users text-3xl text-purple-500 mt-1"></i>
+            <div>Civil Registration System – Government Digital Platform</div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl flex items-start gap-4 hover:shadow-xl transition">
+            <i class="fas fa-shopping-cart text-3xl text-pink-500 mt-1"></i>
+            <div>Hiscraves V1 & V2 – Scalable E-commerce Platform</div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl flex items-start gap-4 hover:shadow-xl transition">
+            <i class="fas fa-child text-3xl text-amber-500 mt-1"></i>
+            <div>Aunty-SG – On-demand Childcare Platform</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Awards -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <i class="fas fa-graduation-cap section-icon"></i>
+            <h2 class="text-2xl font-semibold">EDUCATION</h2>
+          </div>
+          <div class="space-y-4 text-slate-600 dark:text-slate-400">
+            <div><b>B.Tech (AKTU Board)</b><br>Babu Sunder Singh Institute of Technology and Management, Lucknow</div>
+            <div><b>Diploma (BTEUP Board)</b><br>Government Leather Institute, Agra</div>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <i class="fas fa-trophy section-icon"></i>
+            <h2 class="text-2xl font-semibold">AWARDS & RECOGNITION</h2>
+          </div>
+          <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+            <li><i class="fas fa-award text-yellow-500"></i> Appreciation Award – Seekex Technologies</li>
+            <li><i class="fas fa-award text-yellow-500"></i> Excellent Performance Award – Singsys</li>
+            <li><i class="fas fa-award text-yellow-500"></i> Shining Star Award – Singsys</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Fixed Footer -->
+  <footer class="footer-fixed bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700 py-4 no-print">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Choose Template:</span>
+        <select id="template-select" class="bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-2xl px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="modern">Modern Animated (Recommended)</option>
+          <option value="minimal">Minimal Clean</option>
+          <option value="professional">Professional Corporate</option>
+        </select>
+      </div>
+
+      <div class="flex gap-4">
+        <button onclick="window.print()" class="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl transition">
+          <i class="fas fa-print"></i><span>Print</span>
+        </button>
+        <button onclick="downloadPDF()" class="flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl transition">
+          <i class="fas fa-download"></i><span>Download PDF</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    tailwind.config = { darkMode: 'class' };
+
+    // Template Switcher
+    document.getElementById('template-select').addEventListener('change', function() {
+      document.querySelectorAll('.template-container').forEach(el => el.classList.remove('active'));
+      document.getElementById(this.value).classList.add('active');
+    });
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    function updateIcon() {
+      themeToggle.innerHTML = html.classList.contains('dark') 
+        ? '<i class="fas fa-sun text-xl"></i>' 
+        : '<i class="fas fa-moon text-xl"></i>';
+    }
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    }
+    updateIcon();
+
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+      updateIcon();
+    });
+
+    function downloadPDF() {
+      const originalTitle = document.title;
+      document.title = "Kapil_Kumar_Verma_Resume.pdf";
+      window.print();
+      setTimeout(() => document.title = originalTitle, 500);
+    }
+  </script>
+</body>
+</html>
